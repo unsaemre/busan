@@ -3,7 +3,7 @@ var main = new Swiper(".main", {
   slidesPerView: 1,
   slidesPerGroup: 1,
   autoplay: {
-    delay: 2880,
+    delay: 2960,
     disableOnInteraction: false,
   },
   loop: true,
@@ -43,6 +43,12 @@ $(function () {
     }, 3100);
   };
   ticker();
+});
+
+$("#play01").on("click", function () {
+  $(this).hide();
+  $("#pause01").show();
+  main.autoplay.start();
 });
 
 // section 1
