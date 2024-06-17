@@ -143,6 +143,9 @@ a {
 .fsz34 {
   font-size: 34px;
 }
+.font-blue {
+  color: #0766b3;
+}
 
 .arrows {
   cursor: pointer;
