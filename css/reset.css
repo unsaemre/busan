@@ -104,7 +104,7 @@ section {
 }
 body {
   line-height: 1;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #222;
@@ -140,13 +140,29 @@ a {
 .fw400 {
   font-weight: 400;
 }
-.fsz34 {
-  font-size: 34px;
+.fsz36 {
+  font-size: 36px;
 }
 .font-blue {
-  color: #0766b3;
+  color: #14adea;
 }
 
+/* arrows */
 .arrows {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.arrows #prev,
+.arrows #next {
+  font-size: 34px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 150px;
+  padding: 10px;
+}
+.arrows #prev {
+  background-color: #222;
+  color: #fff;
 }
