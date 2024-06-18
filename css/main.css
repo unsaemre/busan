@@ -12,7 +12,6 @@
 }
 
 .container {
-  position: relative;
 }
 /* main slide */
 .main_slider {
@@ -21,18 +20,11 @@
   margin-bottom: 128px;
   height: 760px;
 }
-.main_slider .swiper-slide p {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
 
 /* text_slide */
 .text_box {
   position: absolute;
-  top: 700px;
+  top: 800px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -63,6 +55,10 @@
   position: absolute;
   top: 0;
   right: 10px;
+}
+
+.text-slide {
+  height: 46px;
 }
 
 /* section 1 */

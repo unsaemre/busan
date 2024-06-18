@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="header_container"></div>
@@ -50,14 +50,32 @@
       </div>
 
       <div class="text_box">
-        <ul class="text" id="ticker">
-          <li>100년의 역사를 품은 집</li>
-          <li>부산 근현대사를 한눈에!! 남포동 아이와 가볼 만한 곳</li>
-          <li>특별한 나니까, 이색 사진관에서 남기는 ‘특별한 한 컷’</li>
-          <li>대한민국 최초 야간 먹방 테마파크, 부평깡통야시장</li>
-          <li>역시 맛있는 부산, 부산 비건 빵지순례</li>
-          <li>한국에서 체험하는 가장 생생한 인도</li>
-        </ul>
+        <div class="swiper text-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p id="text">100년의 역사를 품은 집</p>
+            </div>
+            <div class="swiper-slide">
+              <p id="text">
+                부산 근현대사를 한눈에!! 남포동 아이와 가볼 만한 곳
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p id="text">
+                특별한 나니까, 이색 사진관에서 남기는 ‘특별한 한 컷’
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p id="text">대한민국 최초 야간 먹방 테마파크, 부평깡통야시장</p>
+            </div>
+            <div class="swiper-slide">
+              <p id="text">역시 맛있는 부산, 부산 비건 빵지순례</p>
+            </div>
+            <div class="swiper-slide">
+              <p id="text">한국에서 체험하는 가장 생생한 인도</p>
+            </div>
+          </div>
+        </div>
         <div class="swiper-pagination" id="count01"></div>
         <div class="arrows">
           <i class="xi-angle-left" id="prev01"></i>

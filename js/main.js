@@ -3,7 +3,7 @@ var main = new Swiper(".main", {
   slidesPerView: 1,
   slidesPerGroup: 1,
   autoplay: {
-    delay: 2960,
+    delay: 3000,
     disableOnInteraction: false,
   },
   loop: true,
@@ -31,25 +31,34 @@ $("#play01").on("click", function () {
   main.autoplay.start();
 });
 
+new Swiper(".text-slide", {
+  direction: "vertical",
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+});
+
 //
 
-$(function () {
-  var ticker = function () {
-    setTimeout(function () {
-      $("#ticker li:first").animate({ marginTop: "-20px" }, 500, function () {
-        $(this).detach().appendTo("ul#ticker").removeAttr("style");
-      });
-      ticker();
-    }, 3100);
-  };
-  ticker();
-});
+// $(function () {
+//   var ticker = function () {
+//     setTimeout(function () {
+//       $("#ticker li:first").animate({ marginTop: "-20px" }, 500, function () {
+//         $(this).detach().appendTo("ul#ticker").removeAttr("style");
+//       });
+//       ticker();
+//     }, 3100);
+//   };
+//   ticker();
+// });
 
-$("#play01").on("click", function () {
-  $(this).hide();
-  $("#pause01").show();
-  main.autoplay.start();
-});
+// $("#play01").on("click", function () {
+//   $(this).hide();
+//   $("#pause01").show();
+//   main.autoplay.start();
+// });
 
 // section 1
 var swiper = new Swiper(".first", {
