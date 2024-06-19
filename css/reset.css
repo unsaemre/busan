@@ -146,6 +146,9 @@ a {
 .font-blue {
   color: #14adea;
 }
+.noto {
+  font-family: "Noto Sans KR", sans-serif;
+}
 
 /* arrows */
 .arrows {
