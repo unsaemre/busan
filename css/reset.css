@@ -146,8 +146,24 @@ a {
 .font-blue {
   color: #14adea;
 }
+.font-blue2 {
+  color: #2b9ccb;
+}
+.font-orange {
+  color: #f09e48;
+}
+.font-turq {
+  color: #3bb395;
+}
 .noto {
   font-family: "Noto Sans KR", sans-serif;
+}
+.update {
+  color: #fff;
+  background-color: #58cb30;
+  padding: 1px 4px;
+  border-radius: 15px;
+  font-size: 10px;
 }
 
 /* arrows */
@@ -155,15 +171,19 @@ a {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
 }
 .arrows #prev,
 .arrows #next {
-  font-size: 34px;
+  font-size: 28px;
   background-color: #222;
   color: #fff;
   border-radius: 150px;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 .arrows #prev {
   background-color: #222;
