@@ -386,6 +386,10 @@ body.active {
   background-color: #1851a7;
 }
 
+#info li:hover {
+  color: #3586ff;
+}
+
 /* service */
 .service {
   font-family: "Noto Sans KR", sans-serif;
@@ -462,6 +466,10 @@ body.active {
 .service .item:nth-child(9) {
   border: none;
 }
+.service .item:hover h3 {
+  color: #3586ff;
+}
+
 /* Solutions */
 .solution > h1 {
   font-size: 18px;
@@ -503,6 +511,12 @@ body.active {
   font-size: 16px;
   margin-top: 10px;
   color: #666;
+}
+.solution h1:hover {
+  color: #14adea;
+}
+.solution li:hover {
+  color: #3586ff;
 }
 
 /* market */
