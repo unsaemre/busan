@@ -57,8 +57,8 @@
   color: #222;
   background-color: #fff;
   width: 170px;
-  height: 45px;
-  line-height: 45px;
+  height: 25px;
+  line-height: 25px;
   margin: 0 auto;
   border-radius: 100px;
   font-size: 20px;
@@ -150,14 +150,14 @@
   color: #3586ff;
 }
 .s2 .icon li p {
-  padding-bottom: 16px;
   padding-top: 10px;
   font-size: 18px;
   font-weight: 600;
+  height: 55px;
 }
 .s2 .icon .swiper-slide.active > p {
   color: #3586ff;
-  border-bottom: 3px solid #3586ff;
+  border-bottom: 4px solid #3586ff;
 }
 .s2 .swiper-slide {
   position: relative;
