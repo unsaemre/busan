@@ -471,22 +471,22 @@ body.active {
 }
 
 /* Solutions */
-.solution > h1 {
+.sub_solution > h1 {
   font-size: 18px;
 }
-.solution .info h1 {
+.sub_solution .info h1 {
   margin-top: 10px;
   height: 40px;
   line-height: 40px;
 }
-.solution .info_btn {
+.sub_solution .info_btn {
   margin-top: 30px;
 }
-.solution .wrap {
+.sub_solution .wrap {
   display: block;
   margin-top: 14px;
 }
-.solution .wrap > h1 {
+.sub_solution .wrap > h1 {
   font-weight: bold;
   font-size: 36px;
   border-bottom: 1px solid #ccc;
@@ -495,11 +495,11 @@ body.active {
   line-height: 32px;
   padding-bottom: 20px;
 }
-.solution .item_wrap {
+.sub_solution .item_wrap {
   display: flex;
   gap: 40px;
 }
-.solution .item_wrap li {
+.sub_solution .item_wrap li {
   width: 360px;
   line-height: 20px;
   margin-top: 10px;
@@ -507,15 +507,15 @@ body.active {
   font-size: 20px;
   padding: 10px 0;
 }
-.solution .item_wrap .text {
+.sub_solution .item_wrap .text {
   font-size: 16px;
   margin-top: 10px;
   color: #666;
 }
-.solution h1:hover {
+.sub_solution h1:hover {
   color: #14adea;
 }
-.solution li:hover {
+.sub_solution li:hover {
   color: #3586ff;
 }
 

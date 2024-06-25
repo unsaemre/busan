@@ -1,0 +1,238 @@
+//font
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+$ff: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+  "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+  "Malgun Gothic", sans-serif;
+
+//common
+$color: #333;
+$initfz: 14px;
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+form,
+fieldset,
+p,
+button,
+pre {
+  margin: 0;
+  padding: 0;
+  font-size: $initfz;
+  color: $color;
+  font-family: $ff;
+  line-height: 150%;
+  font-weight: 300;
+}
+td,
+th {
+  padding: 0;
+  font-family: $ff;
+  font-size: $initfz;
+  color: $color;
+  font-weight: 300;
+}
+input,
+select,
+button,
+textarea {
+  padding: 0;
+  border: 1px solid #ddd;
+  font-family: $ff;
+  font-size: $initfz;
+  font-weight: 300;
+}
+pre {
+  white-space: pre-line;
+  font-family: $ff;
+}
+a,
+span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: none;
+  vertical-align: top;
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* float */
+$float: "fl" left, "fr" right;
+@each $name, $val in $float {
+  .#{$name} {
+    float: $val;
+  }
+}
+.cb:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+////////////////////////////////////
+.slide_ovh {
+  position: relative;
+  margin: 50px auto;
+  padding: 40px 0;
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #ddd;
+  .top_mask {
+    overflow: hidden;
+    .item {
+      > div {
+        width: 580px;
+      }
+      .img {
+        .cont {
+          background-color: #eee;
+          > span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 600;
+            color: #aaa;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .mov_frame {
+          position: relative;
+          padding-bottom: 56.25%;
+          .cont {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .txt_box {
+        .type {
+          line-height: 100%;
+          color: tomato;
+        }
+        .tit {
+          padding-top: 10px;
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 100%;
+        }
+        .txt_cont {
+          margin-top: 20px;
+        }
+        .more_btn {
+          display: inline-block;
+          margin-top: 40px;
+          transition: 0.5s all;
+          &:hover {
+            color: tomato;
+          }
+        }
+      }
+    }
+  }
+  .arrow_btn {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    font-size: 60px;
+    line-height: 100%;
+    transition: 0.5s all;
+    &:hover {
+      color: tomato;
+    }
+    &.p {
+      left: -72px;
+    }
+    &.n {
+      right: -72px;
+    }
+  }
+  .tab_box {
+    overflow-x: auto;
+    z-index: 10;
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    white-space: nowrap;
+    &::-webkit-scrollbar {
+      height: 5px;
+      background-color: #eee;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #000;
+    }
+    .slide_tab {
+      width: 580px;
+      padding-bottom: 20px;
+      > ul {
+        margin-left: -10px;
+        font-size: 0;
+        > li {
+          opacity: 0.5;
+          display: inline-block;
+          width: calc(20% - 10px);
+          margin-left: 10px;
+          vertical-align: top;
+          transition: 0.5s all;
+          .js_slide_tab {
+            width: 100%;
+            > span {
+              display: block;
+            }
+            .img {
+              width: 100%;
+              height: 75px;
+              text-indent: -99999px;
+              background-color: #000;
+            }
+            .txt {
+              padding-top: 10px;
+              font-size: 12px;
+              line-height: 100%;
+              text-align: center;
+            }
+          }
+          &.act {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
