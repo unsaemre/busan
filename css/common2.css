@@ -1,21 +1,15 @@
 .header_container {
   font-family: "Noto Sans KR", sans-serif;
   z-index: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
-  color: #fff;
+  color: #222;
 }
 .header_container.active {
+  border-bottom: 1px solid #ccc;
   background-color: #fff;
-  color: #222;
-  z-index: 1000;
-  box-shadow: 10px, 10px, 14px, rgba(0, 0, 0, 0.5);
 }
 
 .header {
-  background-color: #22222215;
   /* color: #fff; */
   display: flex;
   align-items: center;
@@ -106,7 +100,7 @@
   color: #3586ff;
   text-decoration: underline;
   text-decoration-thickness: 4px;
-  text-underline-offset: 29px;
+  text-underline-offset: 30px;
 }
 .gnb_wrap {
   position: relative;
@@ -126,7 +120,7 @@
   align-items: center;
   justify-content: center;
   margin-right: 6px;
-  border: 1px solid #fff;
+  border: 1px solid #666;
   border-radius: 10px;
 }
 .gnb_wrap .nav .btn1 i {
@@ -149,12 +143,12 @@
   justify-content: center;
   gap: 6px;
   margin-right: 6px;
-  border: 1px solid #fff;
+  border: 1px solid #222;
   border-radius: 10px;
   width: 95px;
   height: 32px;
-  color: #666;
-  background-color: #fff;
+  color: #fff;
+  background-color: #222;
   font-size: 14px;
   transition: all 0.3s;
 }

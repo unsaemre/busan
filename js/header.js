@@ -1,18 +1,3 @@
-$("#black").hide();
-
-$(window).scroll(function () {
-  var scrollTop = $(window).scrollTop();
-  if (scrollTop > 300) {
-    $(".header_container, .icon, .btn1, .btn2").addClass("active");
-    $("#white").hide();
-    $("#black").show();
-  } else {
-    $(".header_container, .icon, .btn1, .btn2").removeClass("active");
-    $("#black").hide();
-    $("#white").show();
-  }
-});
-
 // gnb
 
 $(".gnb>li").mouseenter(function () {

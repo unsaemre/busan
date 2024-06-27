@@ -1,4 +1,12 @@
 <div class="footer_container">
+  <div class="dock">
+    <ul>
+      <li><img src="../images/footer/dock-1.png" alt="" /></li>
+      <li><img src="../images/footer/dock-2.png" alt="" /></li>
+      <li class="gotop"><img src="../images/footer/dock-3.png" alt="" /></li>
+      <li class="gobottom"><img src="../images/footer/dock-4.svg" alt="" /></li>
+    </ul>
+  </div>
   <div class="footer">
     <div class="footer_wrap">
       <div class="f_top">
@@ -93,3 +101,33 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 0) {
+      $(".gotop").hide();
+      $(".gobottom").show();
+    }
+  });
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 700) {
+      $(".gobottom").hide();
+      $(".gotop").show();
+    }
+  });
+
+  var scrollBottom =
+    $(document).height() - $(window).height() - $(window).scrollTop();
+
+  $(".gotop").click(function () {
+    $("html").stop().animate({ scrollTop: 0 }, "fast");
+  });
+  $(".gobottom").click(function () {
+    $("html").stop().animate({ scrollTop: 99999 }, "fast");
+  });
+  // $(".gobottom").click(function () {
+  //   $("html, body").scrollTop($(document).height());
+  // });
+</script>

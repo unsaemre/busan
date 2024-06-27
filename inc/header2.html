@@ -29,7 +29,6 @@
   <div class="gnb_wrap">
     <div class="logo">
       <a href="../page/main.html">
-        <img src="../images/header/ncp-logo-white.webp" alt="" id="white" />
         <img src="../images/header/ncp-logo-black.svg" alt="" id="black" />
       </a>
     </div>
@@ -469,19 +468,4 @@
 
 <script src="../js/header.js"></script>
 
-<script>
-  $("#black").hide();
-
-  $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop > 100) {
-      $(".header_container, .icon, .btn1, .btn2").addClass("active");
-      $("#white").hide();
-      $("#black").show();
-    } else {
-      $(".header_container, .icon, .btn1, .btn2").removeClass("active");
-      $("#black").hide();
-      $("#white").show();
-    }
-  });
-</script>
+<script></script>
