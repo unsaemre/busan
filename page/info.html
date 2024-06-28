@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="../css/info.css" />
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common2.css" />
+    <link rel="stylesheet" href="../css/common_info.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -63,15 +63,17 @@
       </div>
 
       <!-- section1 -->
-      <div class="s1_wrap" id="div1">
+      <div class="s1_wrap scroll">
         <div class="section s1">
           <div class="title_wrap">
-            <ul class="title">
-              <li><a href="#div1" id="scroll_move">특징</a></li>
-              <li><a href="#div2" id="scroll_move">상세 기능</a></li>
-              <li><a href="#div3" id="scroll_move">요금</a></li>
-              <li>
-                <a href="#div4" id="scroll_move"
+            <ul class="title floating-menu">
+              <li class="m"><a href="#section-01" class="menu-01">특징</a></li>
+              <li class="m">
+                <a href="#section-02" class="menu-02">상세 기능</a>
+              </li>
+              <li class="m"><a href="#section-03" class="menu-03">요금</a></li>
+              <li class="m">
+                <a href="#section-04" class="menu-04"
                   >사용 가이드 <i class="xi-external-link"></i
                 ></a>
               </li>
@@ -100,22 +102,22 @@
             <li>
               <img src="../images/info/info_section01_item02.png" alt="" />
               <div class="text">
-                <h2>빠르고 간편한 비즈니스 인사이트 생성</h2>
+                <h2>서버리스 데이터 분석 서비스</h2>
                 <p>
-                  SQL 사용을 통해 누구나 쉽고 빠르게 대규모 데이터 세트를 분석할
-                  수 있으며, 고객의 다양한 니즈에 맞는 비즈니스 인사이트를
-                  제공합니다.
+                  분석 작업에 필요한 별도의 인프라 리소스 관리가 요구되지
+                  않으며, 데이터 분석에만 집중할 수 있습니다. 또한, 실행된
+                  쿼리만큼 요금이 청구되어 비용 효율적인 사용이 가능합니다
                 </p>
               </div>
             </li>
             <li>
               <img src="../images/info/info_section01_item03.png" alt="" />
               <div class="text">
-                <h2>빠르고 간편한 비즈니스 인사이트 생성</h2>
+                <h2>NAVER Cloud Data 서비스 통합 분석</h2>
                 <p>
-                  SQL 사용을 통해 누구나 쉽고 빠르게 대규모 데이터 세트를 분석할
-                  수 있으며, 고객의 다양한 니즈에 맞는 비즈니스 인사이트를
-                  제공합니다.
+                  NAVER Cloud의 Data Catalog와 애널리틱스 서비스를 이용하여
+                  Storage에 저장되어 있는 데이터를 간편하게 조회 및 분석할 수
+                  있습니다.
                 </p>
               </div>
             </li>
@@ -124,8 +126,8 @@
       </div>
 
       <!-- section2 -->
-      <div class="section s2" id="div2">
-        <div class="item item2">
+      <div class="section s2 scroll">
+        <div class="item item-02">
           <h1>상세기능</h1>
           <ul>
             <li>
@@ -169,7 +171,7 @@
       </div>
 
       <!-- section3 -->
-      <div class="s3_wrap" id="div3">
+      <div class="s3_wrap">
         <div class="section s3">
           <h1>연동 부가 서비스</h1>
           <ul>
@@ -219,7 +221,7 @@
         </div>
       </div>
       <!-- section4 -->
-      <div class="section s4" id="div4">
+      <div class="section s4 item-03 scroll">
         <h1>요금안내</h1>
         <p>
           Data Query 서비스의 이용 요금은 쿼리 작업 실행을 통해 처리된 데이터의
@@ -282,22 +284,22 @@
     <div class="footer_container"></div>
 
     <script>
-      $(".header_container").load("../inc/header2.html");
+      $(".header_container").load("../inc/header_info.html");
       $(".footer_container").load("../inc/footer.html");
     </script>
 
     <script>
-      $(".title").find("li:first").addClass("active");
+      $(".floating-menu").find("li:first").addClass("active");
 
-      $(".title li").click(function () {
-        if ($(this).hasClass("active")) {
-          $(".title li").removeClass("active");
-        } else {
-          $(".title li").removeClass("active");
+      // $(".floating-menu li").click(function () {
+      //   if ($(this).hasClass("active")) {
+      //     $(".floating-menu li").removeClass("active");
+      //   } else {
+      //     $(".floating-menu li").removeClass("active");
 
-          $(this).addClass("active");
-        }
-      });
+      //     $(this).addClass("active");
+      //   }
+      // });
 
       $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
@@ -308,13 +310,42 @@
         }
       });
 
-      $(document).ready(function ($) {
-        $(".scroll_move").click(function (event) {
-          event.preventDefault();
-
-          $("html,body").animate({ scrollTop: $(this.hash).offset().top }, 500);
+      (function (global, $) {
+        var $menu = $(".floating-menu li.m"),
+          $contents = $(".scroll"),
+          $doc = $("html, body");
+        $(function () {
+          // 해당 섹션으로 스크롤 이동
+          $menu.on("click", "a", function (e) {
+            var $target = $(this).parent(),
+              idx = $target.index(),
+              section = $contents.eq(idx),
+              offsetTop = section.offset().top;
+            $doc.stop().animate(
+              {
+                scrollTop: offsetTop,
+              },
+              300
+            );
+            return false;
+          });
         });
-      });
+
+        // menu class 추가
+        $(window).scroll(function () {
+          var scltop = $(window).scrollTop();
+          $.each($contents, function (idx, item) {
+            var $target = $contents.eq(idx),
+              i = $target.index(),
+              targetTop = $target.offset().top;
+
+            if (targetTop <= scltop) {
+              $menu.removeClass("active");
+              $menu.eq(idx).addClass("active");
+            }
+          });
+        });
+      })(window, window.jQuery);
     </script>
   </body>
 </html>
