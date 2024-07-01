@@ -43,7 +43,7 @@
   position: relative;
   height: 260px;
   padding-bottom: 40px;
-  z-index: -1;
+  z-index: 1;
 }
 .info_container .hero .wrap {
   margin: 0 auto;
